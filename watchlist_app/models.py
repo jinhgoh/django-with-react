@@ -10,3 +10,10 @@ class Movie(models.Model):
     
     def __str__(self):
         return self.name
+    
+class ImageTest(models.Model):
+    name = models.CharField(max_length=50)
+    img = models.ImageField(blank=True, null=True)
+    
+    def __str__(self):
+        return self.name
