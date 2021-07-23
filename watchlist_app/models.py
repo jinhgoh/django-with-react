@@ -7,6 +7,7 @@ class Movie(models.Model):
     active = models.BooleanField(default=True)
     img = models.ImageField(blank=True, null=True)
     upload = models.FileField(blank=True, null=True)
+    num1 = models.IntegerField()
     
     def __str__(self):
         return self.name
@@ -17,3 +18,13 @@ class ImageTest(models.Model):
     
     def __str__(self):
         return self.name
+    
+class Titanic(models.Model):
+    pclass = models.IntegerField()
+    sex = models.IntegerField()
+    age = models.IntegerField()
+    sibsp = models.IntegerField()
+    parch = models.IntegerField()
+    fare = models.IntegerField()
+    embarked = models.IntegerField()
+    title = models.IntegerField()
